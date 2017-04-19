@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2017-04-19
+  sleep_hours: 1
+  bedtime: MyString
+  getuptime: MyString
+  sleep_onset: 1
+  wakefulness: 1
+  awakenings: 1
+  time_awake: 1
+  caffiene: 1
+  alcohol: 1
+  naptime: 1
+  exercise: 2017-04-19 12:15:34
+  sleepiness: 1
+
+two:
+  day: 2017-04-19
+  sleep_hours: 1
+  bedtime: MyString
+  getuptime: MyString
+  sleep_onset: 1
+  wakefulness: 1
+  awakenings: 1
+  time_awake: 1
+  caffiene: 1
+  alcohol: 1
+  naptime: 1
+  exercise: 2017-04-19 12:15:34
+  sleepiness: 1
