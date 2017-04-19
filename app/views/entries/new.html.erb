@@ -1,0 +1,6 @@
+<%= simple_form_for @entry, url: entries_new_path do |e| %>
+  <%= e.input :day, required: false %>
+  <%= e.input :sleep_hours %>
+  <%= e.input :caffiene %>
+  <%= e.button :submit %>
+<% end %>
