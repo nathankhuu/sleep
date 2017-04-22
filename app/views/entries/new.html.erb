@@ -1,7 +1,7 @@
-<h1>Create entry for last night</h1>
+<h1>Edit/Create Entry</h1>
 
 <%= simple_form_for @entry, url: entries_new_path do |e| %>
-  <%= e.input :day, as: :date, html5: true%> 
+  <%= e.input :day, as: :date, html5: true, label: '*Date (required)'%> 
   <%= e.input :sleep_hours, label: 'How many hours did you sleep last night?' %> 
   <%= e.input :bedtime, label: 'What time did you go to sleep last night?' %>
   <%= e.input :getuptime, label:'What time did you wake up today?'%>
@@ -15,5 +15,5 @@
   <%= e.input :exercise, label: 'Total time of exercise yesterday (in minutes)' %>
   <%= e.input :sleepiness, label: 'How sleepy did you feel yesterday? (1 - so sleepy had to struggle to stay awake during much of the day, 2 - somewhat tired, 3 - fairly alert, 4 - wide awake)' %>
   <%= e.input :notes, label: 'Anything else' %>
-  <%= e.button :submit %>
+  <%= e.button :submit, 'Edit/Create Entry' %>
 <% end %>
