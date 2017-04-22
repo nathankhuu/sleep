@@ -3,6 +3,10 @@ class EntriesController < ApplicationController
 		@entry = Entry.new
 	end
 
+	def show
+		@entry = Entry.find(params[:id])
+	end
+
 	def create
 		if params[:entry][:day].blank?
 			redirect_to '/users/index'

@@ -1,19 +1,60 @@
-<h1>Edit/Create Entry</h1>
+<div id="wrapper">
 
-<%= simple_form_for @entry, url: entries_new_path do |e| %>
-  <%= e.input :day, as: :date, html5: true, label: '*Date (required)'%> 
-  <%= e.input :sleep_hours, label: 'How many hours did you sleep last night?' %> 
-  <%= e.input :bedtime, label: 'What time did you go to sleep last night?' %>
-  <%= e.input :getuptime, label:'What time did you wake up today?'%>
-  <%= e.input :sleep_onset, label: 'How long did it take you to fall asleep last night (in minutes)?' %>
-  <%= e.input :wakefulness, label: 'How awake did you feel when you woke up? (1 - wide awake, 2 - awake but a little tired, 3 -sleepy)'%>
-  <%= e.input :awakenings, label: 'How many awakenings did you have last night?' %>
-  <%= e.input :time_awake, label: 'If any awakenings, how long were you awake in total?' %>
-  <%= e.input :caffiene, label: 'Number of servings of caffeinated drinks yesterday' %>
-  <%= e.input :alcohol, label: 'Number of servings of alcoholic drinks yesterday' %>
-  <%= e.input :naptime, label: 'Total time of naps yesterday (in minutes)' %>
-  <%= e.input :exercise, label: 'Total time of exercise yesterday (in minutes)' %>
-  <%= e.input :sleepiness, label: 'How sleepy did you feel yesterday? (1 - so sleepy had to struggle to stay awake during much of the day, 2 - somewhat tired, 3 - fairly alert, 4 - wide awake)' %>
-  <%= e.input :notes, label: 'Anything else' %>
-  <%= e.button :submit, 'Edit/Create Entry' %>
-<% end %>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Sleep Diary Options
+                </a>
+            </li>
+            <li>
+                <a href="/entries/new">Edit Diary Entries</a>
+            </li>
+            <li>
+                <a href="/users/calendar">View Sleep History</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    <h1>Edit/Create Entry</h1>
+                    <%= simple_form_for @entry, url: entries_new_path do |e| %>
+                      <%= e.input :day, as: :date, html5: true, label: '*Date (required)'%> 
+                      <%= e.input :sleep_hours, label: 'How many hours did you sleep last night?' %> 
+                      <%= e.input :bedtime, label: 'What time did you go to sleep last night?' %>
+                      <%= e.input :getuptime, label:'What time did you wake up today?'%>
+                      <%= e.input :sleep_onset, label: 'How long did it take you to fall asleep last night (in minutes)?' %>
+                      <%= e.input :wakefulness, label: 'How awake did you feel when you woke up? (1 - wide awake, 2 - awake but a little tired, 3 -sleepy)'%>
+                      <%= e.input :awakenings, label: 'How many awakenings did you have last night?' %>
+                      <%= e.input :time_awake, label: 'If any awakenings, how long were you awake in total?' %>
+                      <%= e.input :caffiene, label: 'Number of servings of caffeinated drinks today' %>
+                      <%= e.input :alcohol, label: 'Number of servings of alcoholic drinks today' %>
+                      <%= e.input :naptime, label: 'Total time of naps today (in minutes)' %>
+                      <%= e.input :exercise, label: 'Total time of exercise today (in minutes)' %>
+                      <%= e.input :sleepiness, label: 'How sleepy did you feel today? (1 - so sleepy had to struggle to stay awake during much of the day, 2 - somewhat tired, 3 - fairly alert, 4 - wide awake)' %>
+                      <%= e.input :notes, label: 'Anything else' %>
+                      <%= e.button :submit, 'Edit/Create Entry' %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>

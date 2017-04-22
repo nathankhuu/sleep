@@ -27,6 +27,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'high_voltage'
 gem 'simple_form'
+gem "simple_calendar", "~> 2.0"
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil

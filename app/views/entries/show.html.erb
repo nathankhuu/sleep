@@ -1,0 +1,123 @@
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Sleep Diary Options
+                </a>
+            </li>
+            <li>
+                <a href="/entries/new">Edit Diary Entries</a>
+            </li>
+            <li>
+                <a href="/users/calendar">View Sleep History</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a><br/>
+										<h1><%= @entry.day.month.to_s + '/' + @entry.day.day.to_s + '/' + @entry.day.year.to_s %></h1>
+
+										<table style="width:200px" border="1px solid black">
+										  <%if !@entry.sleep_hours.nil?%>
+											  <tr>
+											    <td align="center">Hours of Sleep</td>
+											    <td align="center"><%=@entry.sleep_hours%></td>
+											  </tr>
+										  <%end%>
+										  <%if !@entry.bedtime.nil?%>
+											  <tr>
+											    <td align="center">Bedtime Yesterday</td>
+											    <td align="center"><%=@entry.bedtime%></td>
+											  </tr>
+											<%end%>
+										 	<%if !@entry.bedtime.nil?%>
+											  <tr>
+											    <td align="center">Woke Up Today At</td>
+											    <td align="center"><%=@entry.getuptime%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.sleep_onset.nil?%>
+											  <tr>
+											    <td align="center">Time To Fall Asleep Last Night</td>
+											    <td align="center"><%=@entry.sleep_onset%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.wakefulness.nil?%>
+											  <tr>
+											    <td align="center">Wakefulness (Scale from 1-3, 1 being the most awake)</td>
+											    <td align="center"><%=@entry.wakefulness%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.awakenings.nil?%>
+											  <tr>
+											    <td align="center">Number of Awakenings Last Night</td>
+											    <td align="center"><%=@entry.awakenings%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.time_awake.nil?%>
+											  <tr>
+											    <td align="center">Time Awake In The Middle of the Night</td>
+											    <td align="center"><%=@entry.time_awake%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.caffiene.nil?%>
+											  <tr>
+											    <td align="center">Servings of Caffiene Today</td>
+											    <td align="center"><%=@entry.caffiene%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.alcohol.nil?%>
+											  <tr>
+											    <td align="center">Servings of Alcohol Today</td>
+											    <td align="center"><%=@entry.alcohol%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.naptime.nil?%>
+											  <tr>
+											    <td align="center">Total time of all naps today</td>
+											    <td align="center"><%=@entry.naptime%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.exercise.nil?%>
+											  <tr>
+											    <td align="center">Total time of exercise today</td>
+											    <td align="center"><%=@entry.exercise%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.sleepiness.nil?%>
+											  <tr>
+											    <td align="center">Sleepiness During the Day (Scal of 1-4, 1 being the most sleepy)</td>
+											    <td align="center"><%=@entry.sleepiness%></td>
+											  </tr>
+											<%end%>
+											<%if !@entry.notes.nil?%>
+											  <tr>
+											    <td align="center">Additional Notes</td>
+											    <td align="center"><%=@entry.notes%></td>
+											  </tr>
+											<%end%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
