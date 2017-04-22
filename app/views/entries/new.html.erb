@@ -1,6 +1,7 @@
 <h1>Create entry for last night</h1>
 
 <%= simple_form_for @entry, url: entries_new_path do |e| %>
+  <%= e.input :day, as: :date, html5: true%> 
   <%= e.input :sleep_hours, label: 'How many hours did you sleep last night?' %> 
   <%= e.input :bedtime, label: 'What time did you go to sleep last night?' %>
   <%= e.input :getuptime, label:'What time did you wake up today?'%>
