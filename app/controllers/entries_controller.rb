@@ -22,4 +22,7 @@ class EntriesController < ApplicationController
 		@entry.save
 		redirect_to '/visitors/index'
 	end
+
+	def index
+	end
 end

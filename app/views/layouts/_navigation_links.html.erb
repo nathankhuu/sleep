@@ -1,2 +1,5 @@
 <%# add navigation links to this file %>
+<% if user_signed_in? %>
+	<li><%= link_to 'Sleep Diary', "/entries/index" %></li>
+<%end%>
 <li><%= link_to 'About', page_path('about') %></li>
