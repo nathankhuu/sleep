@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'visitors/index', to: 'visitors#index'
   get 'visitors/alcohol', to: 'visitors#alcohol'
   get 'visitors/hygiene', to: 'visitors#hygiene'
+  get 'visitors/body', to: 'visitors#body'
+  get 'visitors/brain', to: 'visitors#brain'
   get '/users/index', to: 'users#index'
   get '/users/calendar', to: 'users#calendar'
 end
