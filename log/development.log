@@ -21270,3 +21270,131 @@ Processing by VisitorsController#body as HTML
 Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2017-04-23 16:48:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (13.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (18.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 494ms (Views: 480.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2017-04-23 16:48:46 -0700
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (5.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (10.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/index" for ::1 at 2017-04-23 16:48:59 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (5.9ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/calendar" for ::1 at 2017-04-23 16:49:00 -0700
+Processing by UsersController#calendar as HTML
+  Rendering users/calendar.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Mon, 27 Mar 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Tue, 28 Mar 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Wed, 29 Mar 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Thu, 30 Mar 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Fri, 31 Mar 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sat, 01 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sun, 02 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Mon, 03 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Tue, 04 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Wed, 05 Apr 2017]]
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Thu, 06 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Fri, 07 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sat, 08 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sun, 09 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Mon, 10 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Tue, 11 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Wed, 12 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Thu, 13 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Fri, 14 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sat, 15 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sun, 16 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Mon, 17 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Tue, 18 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Wed, 19 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Thu, 20 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Fri, 21 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sat, 22 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sun, 23 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Mon, 24 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Tue, 25 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Wed, 26 Apr 2017]]
+  [1m[36mEntry Load (1.4ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Thu, 27 Apr 2017]]
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Fri, 28 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sat, 29 Apr 2017]]
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ? AND "entries"."day" = ?[0m  [["user_id", 3], ["day", Sun, 30 Apr 2017]]
+  Rendered simple_calendar/_month_calendar.html.erb (90.2ms)
+  Rendered users/calendar.html.erb within layouts/application (94.8ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.9ms)
+  Rendered layouts/_navigation.html.erb (7.3ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 159ms (Views: 149.4ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/entries/show?id=3" for ::1 at 2017-04-23 16:49:02 -0700
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+Completed 200 OK in 67ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_entries_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_entries_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m

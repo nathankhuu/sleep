@@ -33,3 +33,6 @@ group :development do
   gem 'hub', :require=>nil
   gem 'rails_layout'
 end
+group :development, :test do
+    gem 'sqlite3'
+end
