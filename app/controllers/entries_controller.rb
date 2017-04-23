@@ -12,7 +12,7 @@ class EntriesController < ApplicationController
 			redirect_to '/users/index'
 			return
 		end
-		lookup = Entry.where(day: params[:entry][:day])
+		lookup = current_user.entries.where(day: params[:entry][:day])
 		if lookup.length > 0
 			@entry = lookup[0] 
 		else
@@ -71,6 +71,9 @@ class EntriesController < ApplicationController
 		if !params[:entry][:notes].blank?
 			@entry.notes = params[:entry][:notes]
 		end
+
+		@entry.user_id = current_user.id
+
 		@entry.save
 		redirect_to '/users/index'
 	end

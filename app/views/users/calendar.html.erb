@@ -26,7 +26,7 @@
                 		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a></br>
                 		<h3>Showing Date with Hours of Sleep. If entry exists, click on date to see more details of entry.</h3>
                     <%= month_calendar do |date| %>
-                    	<%lookup = Entry.where(day: date) %>
+                    	<%lookup = current_user.entries.where(day: date) %>
 											<%if lookup.length > 0%>
 												<%= link_to date.month.to_s + '/' + date.day.to_s, entries_show_path(id: lookup[0].id) %></br>
 												Hours: <%=lookup[0].sleep_hours%>
