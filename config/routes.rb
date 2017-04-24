@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'visitors/hygiene', to: 'visitors#hygiene'
   get 'visitors/body', to: 'visitors#body'
   get 'visitors/brain', to: 'visitors#brain'
+  get 'visitors/caffeine', to: 'visitors#caffeine'
+  get 'visitors/benefits', to: 'visitors#benefits'
   get '/users/index', to: 'users#index'
   get '/users/calendar', to: 'users#calendar'
 end
