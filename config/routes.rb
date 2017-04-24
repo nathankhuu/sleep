@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
+  root to: 'pages#about'
   devise_for :users
   get '/entries/new', to: 'entries#new'
   get '/entries/show', to: 'entries#show'
